@@ -88,8 +88,9 @@ export default class Slide extends Component {
       )
     }
 
+    const providerKey = String(Boolean(isPresenterMode))
     return (
-      <ThemeProvider theme={{ isPresenterMode }}>
+      <ThemeProvider theme={{ isPresenterMode }} key={providerKey}>
         {rendered}
       </ThemeProvider>
     )
